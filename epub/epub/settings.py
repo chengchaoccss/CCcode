@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for epubspider project
+# Scrapy settings for epub project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -9,22 +9,22 @@
 #     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'epubspider'
+BOT_NAME = 'epub'
 
-SPIDER_MODULES = ['epubspider.spiders']
-NEWSPIDER_MODULE = 'epubspider.spiders'
+SPIDER_MODULES = ['epub.spiders']
+NEWSPIDER_MODULE = 'epub.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'epubspider (+http://www.yourdomain.com)'
+#USER_AGENT = 'epub (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
 
 ITEM_PIPELINES={
     # 'tutorial.pipelines.TextPipeline':300,
-    'epubspider.pipelines.MongoPipeline':400,
-    'epubspider.pipelines.JsonPipeline':350,
+    'epub.pipelines.MongoPipeline':400,
+    'epub.pipelines.JsonPipeline':350,
 }
 MONGO_URI='localhost'
 MONGO_DB='epubdownload'
@@ -55,13 +55,13 @@ MONGO_DB='epubdownload'
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'epubspider.middlewares.EpubSpiderMiddleware': 543,
+#    'epub.middlewares.EpubSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    'epubspider.middlewares.EpubDownloaderMiddleware': 543,
+#    'epub.middlewares.EpubDownloaderMiddleware': 543,
 #}
 
 # Enable or disable extensions
@@ -73,7 +73,7 @@ MONGO_DB='epubdownload'
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 #ITEM_PIPELINES = {
-#    'epubspider.pipelines.EpubPipeline': 300,
+#    'epub.pipelines.EpubPipeline': 300,
 #}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
