@@ -13,6 +13,7 @@ class EpubdownloadSpider(scrapy.Spider):
             url = 'http://www.ixdzs.com/'+href[i]
             yield scrapy.Request(url=url,callback=self.newparse)
 
+
     def newparse(self,response):
         item=EpubItem()
         link = response.xpath('//a[contains(@href,"down?id=") and contains(@href,"p=6")]/@href').extract()
